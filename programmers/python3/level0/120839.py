@@ -48,6 +48,9 @@
 #     가위
 # 라고 생각했는데 틀린 것 같음;;
 
+# 1. 단순히 for문을 사용하여 가위바위보를 넣고
+# 2. if로 가위바위보를 바꾸어주면 될듯
+
 ###############################################################################
 # if '가위' in rsp
 #가위2s 바위0r 보5p
@@ -70,11 +73,6 @@ import re
 # for P in re.finditer("5", rsp) :
 #     print(P.start())
 
-# for R in re.finditer("0", rsp) :
-#     print(P.start())
-
-# for S in re.finditer("2", rsp) :
-#     print(P.start())
 # #가위
 # if 2 in rsp :
 #     #print(rsp.index(2))
@@ -117,19 +115,23 @@ import re
 # for i in 'string' :
 #     print(i, end='')
 
-rsp = input("가위(2), 바위(0), 보(5)를 숫자로 입력하세요:")
 
-answer = ""
 
-for i in rsp :
-    if i=='2' :
-        answer+='0'
-    elif i=='0' :
-        answer+='5'
-    elif i=='5' :
-        answer+='2'
 
-print(answer)
+# rsp = input("가위(2), 바위(0), 보(5)를 숫자로 입력하세요:")
+
+# answer = ""
+
+# for i in rsp :
+#     if i=='2' :
+#         answer+='0'
+#     elif i=='0' :
+#         answer+='5'
+#     elif i=='5' :
+#         answer+='2'
+
+# print(answer)
+
 
 
 
@@ -147,6 +149,43 @@ print(answer)
     
 #     return answer
 
+
+
 #date 2023.04.23.
 #19일 첫번째 시도 실패 이후 23일 두번째 시도에 드디어 성공!!
 #공부가 필요하다...;;
+
+
+
+# 찾아보니 Dictionary 방법과 replace 방법 2가지도 있음
+
+# Dictionary 방법은
+
+# rsp = input("가위(2), 바위(0), 보(5)를 숫자로 입력하세요:")
+# answer = ""
+# d = {'0':'5','2':'0','5':'2'}
+# answer = answer.join(d[i] for i in rsp)
+# print(answer)
+
+
+# replace 방법은
+
+# rsp = input("가위(2), 바위(0), 보(5)를 숫자로 입력하세요:")
+
+# rsp =rsp.replace('2','s')
+# rsp =rsp.replace('5','p')
+# rsp =rsp.replace('0','r')
+# rsp =rsp.replace('r','5')
+# rsp =rsp.replace('s','0')
+# rsp =rsp.replace('p','2')
+
+# print(rsp)
+
+# replace 방법에는 주의사항이 있음
+
+# rsp =rsp.replace('2','0')
+# rsp =rsp.replace('5','2')
+# rsp =rsp.replace('0','5')
+
+# 이렇게 하면 안됨!!
+# ex) '02'일 때 이것을 '50'으로 바뀌어야하지만 '0'이 다시 '5'로 바뀌어서 결과가 '55'가 나와버림;;
