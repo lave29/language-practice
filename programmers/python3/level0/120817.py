@@ -28,15 +28,15 @@
 # 2. 원소의 합 → sum+=i for i in numbers
 
 
-numbers = list(map(int, input().split()))
+# numbers = list(map(int, input().split()))
 
-sum = 0
+# sum = 0
 
-for i in numbers :
-    sum += i
+# for i in numbers :
+#     sum += i
 
-answer=sum/len(numbers)
-print(answer)
+# answer=sum/len(numbers)
+# print(answer)
 
 
 
@@ -55,3 +55,23 @@ print(answer)
 
 
 # date 2023.04.23.
+
+
+# 제출하고 알게된 사실
+# 사실 예전에 활용했지만 까먹은거;;
+# sum 함수가 있다는 사실;;;
+
+
+numbers = list(map(int, input().split()))
+
+answer=sum(numbers)/len(numbers)
+print(answer)
+
+
+
+# def solution(numbers):
+#     answer = 0
+    
+#     answer=sum(numbers)/len(numbers)
+    
+#     return answer
