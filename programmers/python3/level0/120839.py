@@ -118,19 +118,19 @@ import re
 
 
 
-# rsp = input("가위(2), 바위(0), 보(5)를 숫자로 입력하세요:")
+rsp = input("가위(2), 바위(0), 보(5)를 숫자로 입력하세요:")
 
-# answer = ""
+answer = ""
 
-# for i in rsp :
-#     if i=='2' :
-#         answer+='0'
-#     elif i=='0' :
-#         answer+='5'
-#     elif i=='5' :
-#         answer+='2'
+for i in rsp :
+    if i=='2' :
+        answer+='0'
+    elif i=='0' :
+        answer+='5'
+    elif i=='5' :
+        answer+='2'
 
-# print(answer)
+print(answer)
 
 
 
