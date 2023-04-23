@@ -22,12 +22,12 @@
 
 start, end = map(int, input().split())
 
-# answer = []
+answer = []
 
-# for i in range(start, end+1) :
-#     answer.append(i)
+for i in range(start, end+1) :
+    answer.append(i)
 
-# print(answer)
+print(answer)
 
 
 
