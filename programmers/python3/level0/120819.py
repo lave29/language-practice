@@ -42,4 +42,5 @@ print(solution(money))
 # divmod라고 몫과 나머지를 한번에 구하는 함수가 있음
 
 
+
 # date 2023.04.23.
